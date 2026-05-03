@@ -1,3 +1,4 @@
+// discord: w_12, Roblox: DoubleUTwelve
 #include "Population.h"
 
 // Init function so we have all of our agents
@@ -81,6 +82,8 @@ void Population::evolveNextGen(
 
   std::uniform_real_distribution<float> distPerc(0.0f, 1.0f);
   while (newPop.size() < m_population.size()) {
+    // we use tournament select from our Agent code to make sure we have the
+    // best (or atleast good) parents
     Agent &parent1 = tournamentSelect();
     Agent &parent2 = tournamentSelect();
     Agent child;
@@ -116,6 +119,7 @@ void Population::runGeneration(
       if (!agent.isAlive()) {
         continue;
       }
+      // we apply agent events every tick
       agent.applyEvents();
       agent.handleCollisions(blocks);
 
@@ -154,7 +158,6 @@ bool Population::stepGeneration(
   }
 
   m_currentTick++;
-
   return anyAlive && m_currentTick < m_tickAmt;
 }
 

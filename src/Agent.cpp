@@ -1,3 +1,5 @@
+// Discord: w_12, Roblox: DoubleUTwelve
+
 #include "Agent.h"
 
 // init our brain and place our agent in the correct spot in our tilemap
@@ -28,6 +30,7 @@ void Agent::init(std::mt19937 &gen, int tickAmt,
 }
 
 void Agent::render(sf::RenderWindow &window) {
+  // sfml rendering stuff
   if (m_alive)
     window.draw(m_rectShape);
 }
