@@ -1,4 +1,5 @@
 // Discord: w_12, Roblox: DoubleUTwelve
+// All the examples do go / connect with each other
 
 // the truly fun stuff. W_12
 #include "Brain.h"
